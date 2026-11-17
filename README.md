@@ -25,6 +25,23 @@ new EditorView(document.querySelector("#editor"), {
 
 The API is meant to resemble the [`EditorProps.decorations`](https://prosemirror.net/docs/ref/#view.EditorProps.decorations) prop available for traditional decorations, allowing other ProseMirror plugins to define a set of CSS highlights as a function of incoming state changes.
 
+## Demo
+
+See it here:
+
+https://saranrapjs.github.io/prosemirror-css-custom-highlights/
+
+Or run the demo locally:
+
+```sh
+npm run dev
+```
+
+Which hosts the following static demos:
+
+- `http://localhost:5173`: an example schema with a few different node types, where you can add & remove highlight ranges
+- `http://localhost:5173/perf.html`: a 5,000 paragraph benchmark, with various modes of rendering on and offscreen
+
 ## Why use CSS Custom Highlights instead of Decoration.inline?
 
 CSS Custom Highlights is admittedly a somewhat green web API! There are a few situations where CSS Custom Highlights may be preferable to `Decoration.inline` though:
@@ -37,19 +54,6 @@ Here are some reasons to not use it:
 
 - I've observed some browser bugs with specific DOM and range combinations where highlights aren't painted
 - The accessibility story isn't great: declaring a `"type":"spelling-error"` is supposed to treat a custom highlight as a spelling error for screen reader purposes, but this doesn't appear to work yet in Safari; DOM-based accessibility properties are more robust
-
-## Demo
-
-See CSS custom highlights, with click handlers, in action:
-
-```sh
-npm run dev
-```
-
-Then open the printed URL (http://localhost:5173 by default):
-
-- `demo/index.html`: an example schema with a few different node types, where you can add & remove highlight ranges
-- `demo/perf.html`: a 5,000 paragraph benchmark, with various modes of rendering on and offscreen
 
 ## Tests
 
