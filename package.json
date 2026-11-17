@@ -15,6 +15,14 @@
   },
   "author": "Jeff Sisson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saranrapjs/prosemirror-css-custom-highlights.git"
+  },
+  "homepage": "https://github.com/saranrapjs/prosemirror-css-custom-highlights#readme",
+  "bugs": {
+    "url": "https://github.com/saranrapjs/prosemirror-css-custom-highlights/issues"
+  },
   "description": "A ProseMirror plugin that renders inline-style decorations using the CSS Custom Highlights API",
   "type": "module",
   "exports": {
