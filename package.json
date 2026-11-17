@@ -2,7 +2,7 @@
   "name": "prosemirror-css-custom-highlights",
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite demo --open",
+    "dev": "vite --open",
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
@@ -11,7 +11,8 @@
     "test:soak": "FUZZ_SEEDS=${FUZZ_SEEDS:-25} vitest run --project ${PROJECT:-safari} test/fuzz.test.ts -t soak",
     "bench:paint": "PAINT_BENCH=1 vitest run --project ${PROJECT:-safari} --api.allowWrite test/paint.test.ts",
     "test:fuzz": "vitest run --project ${PROJECT:-safari} test/fuzz.test.ts",
-    "test:unit": "vitest run --project ${PROJECT:-safari} test/regressions.test.ts test/clicks.test.ts test/composition.test.ts test/inclusive.test.ts test/properties.test.ts test/viewport.test.ts"
+    "test:unit": "vitest run --project ${PROJECT:-safari} test/regressions.test.ts test/clicks.test.ts test/composition.test.ts test/inclusive.test.ts test/properties.test.ts test/viewport.test.ts",
+    "build:demo": "vite build"
   },
   "author": "Jeff Sisson",
   "license": "MIT",
