@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Large Doc Benchmark</title>
+<style>
+::highlight(perf) {
+  background-color: rgb(255 213 79 / 0.6);
+}
+.perf-inline {
+  background-color: rgb(255 213 79 / 0.6);
+}
+#editor {
+  height: 400px;
+  overflow: auto;
+}
+</style>
+</head>
+<body>
+<nav><a href="index.html">Mixed schema</a> · <a href="perf.html">Large doc</a></nav>
+<p>
+	Modes:
+	<a href="?mode=none">none</a> ·
+	<a href="?mode=inline">inline</a> ·
+	<a href="?mode=highlights">highlights</a> ·
+	<a href="?mode=highlights-fresh">highlights-fresh</a>
+	(add <code>&amp;paras=</code> / <code>&amp;count=</code> to resize)
+</p>
+<pre id="result">running…</pre>
+<div id="editor"></div>
+<script type="module" src="./perf.ts"></script>
+</body>
+</html>

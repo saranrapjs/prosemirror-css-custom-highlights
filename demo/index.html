@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ProseMirror CSS Highlights</title>
+<style>
+::highlight(comment) {
+  background-color: rgb(255 213 79 / 0.6);
+}
+::highlight(spelling-error) {
+  text-decoration: underline wavy red;
+}
+.callout {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px 12px;
+  background: #f6f8fa;
+}
+.callout-label {
+  font-weight: bold;
+  user-select: none;
+}
+.mention {
+  background: #dbeafe;
+  border-radius: 4px;
+  padding: 0 3px;
+}
+</style>
+</head>
+<body>
+<nav><a href="index.html">Mixed schema</a> · <a href="perf.html">Large doc</a></nav>
+<button id="comment-selection">Comment on selection</button>
+<button id="add-spelling-error">Add spelling error</button>
+<div id="editor"></div>
+<div id="popover" hidden></div>
+<p>Plain textarea, to compare native spellcheck:</p>
+<textarea spellcheck="true" rows="4" cols="60"></textarea>
+<script type="module" src="./index.ts"></script>
+</body>
+</html>
